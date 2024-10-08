@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <AvaloniaVersion>11.1.3</AvaloniaVersion>
+    <ReactiveUIVersion>19.5.41</ReactiveUIVersion>
+    <MvvmDialogsVersion>2.1.0</MvvmDialogsVersion>
+  </PropertyGroup>
+</Project>
