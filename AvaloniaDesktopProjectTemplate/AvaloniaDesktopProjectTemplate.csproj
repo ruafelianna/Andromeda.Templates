@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="FrameworkProperties">
+    <TargetFramework>net8.0</TargetFramework>
+    <OutputType>winexe</OutputType>
+    <Nullable>enable</Nullable>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\**" />
+  </ItemGroup>
+
+  <PropertyGroup Label="AssemblyProperties">
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <ApplicationIcon>Assets/main.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Label="NugetProperties">
+    <Authors>Maria Sorokina</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageVersion>1.0.0-rc</PackageVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="$(AvaloniaVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Andromeda.ROOTNAMESPACE.Avalonia\Andromeda.ROOTNAMESPACE.Avalonia.csproj" />
+  </ItemGroup>
+
+</Project>
