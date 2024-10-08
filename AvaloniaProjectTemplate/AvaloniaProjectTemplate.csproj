@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="FrameworkProperties">
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <PropertyGroup Label="AssemblyProperties">
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Label="NugetProperties">
+    <Authors>Maria Sorokina</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageVersion>1.0.0-rc</PackageVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="HanumanInstitute.MvvmDialogs.Avalonia" Version="$(MvvmDialogsVersion)" />
+    <PackageReference Include="HanumanInstitute.MvvmDialogs.Avalonia.DialogHost" Version="$(MvvmDialogsVersion)" />
+    <PackageReference Include="HanumanInstitute.MvvmDialogs.Avalonia.MessageBox" Version="$(MvvmDialogsVersion)" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Andromeda.ROOTNAMESPACE\Andromeda.ROOTNAMESPACE.csproj" />
+  </ItemGroup>
+
+</Project>
